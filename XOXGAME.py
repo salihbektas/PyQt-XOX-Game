@@ -29,7 +29,7 @@ class Game(QtWidgets.QMainWindow):
         self.ui.resetButton.clicked.connect(self.pressReset)
 
         self.isContinue = True
-        self.ui.infoText.setText("Sıra P1")
+        self.ui.infoText.setText("player 1's turn")
         self.ui.infoText.setStyleSheet("color:red;")
 
         self.state = [["", "", ""],["", "", ""],["", "", ""]]
@@ -40,18 +40,18 @@ class Game(QtWidgets.QMainWindow):
             self.isTurn1 = not self.isTurn1
 
             if self.isTurn1:
-                self.ui.infoText.setText("Sıra P1")
+                self.ui.infoText.setText("player 1's turn")
                 self.ui.infoText.setStyleSheet('color:red;')
             else:
-                self.ui.infoText.setText("Sıra P2")
+                self.ui.infoText.setText("player 2's turn")
                 self.ui.infoText.setStyleSheet("color:blue;")
 
     def end(self, endCase):
         if self.isTurn1:
-            self.ui.infoText.setText("!!! P1 kazandı !!!")
+            self.ui.infoText.setText("!!! Player 1 Won !!!")
             self.ui.infoText.setStyleSheet('color:red;')
         else:
-            self.ui.infoText.setText("!!! P2 kazandı !!!")
+            self.ui.infoText.setText("!!! Player 2 Won !!!")
             self.ui.infoText.setStyleSheet("color:blue;")
 
         if endCase == 1:
@@ -87,7 +87,7 @@ class Game(QtWidgets.QMainWindow):
             self.ui.toolButton_5.setStyleSheet("background-color:yellow")
             self.ui.toolButton_7.setStyleSheet("background-color:yellow")
         elif endCase == 9:
-            self.ui.infoText.setText("Hamle kalmadı")
+            self.ui.infoText.setText("No moves left")
             self.ui.infoText.setStyleSheet("color:black;")
 
         
@@ -130,7 +130,7 @@ class Game(QtWidgets.QMainWindow):
             self.isContinue = False
             self.end(8)
         else:
-            #hamle kalmadı kısmını kontrol eder
+            #checks if there is any move left
             for i in self.state:
                 if "" in i:
                     break
@@ -314,7 +314,7 @@ class Game(QtWidgets.QMainWindow):
         icon.addPixmap(QtGui.QPixmap(PATH + "/assets/EmptyIcon.png"), 
                         QtGui.QIcon.Normal, QtGui.QIcon.Off)
 
-        self.ui.infoText.setText("Sıra P1")
+        self.ui.infoText.setText("player 1's turn")
         self.ui.infoText.setStyleSheet("color:red;")
         self.isContinue = True
         
