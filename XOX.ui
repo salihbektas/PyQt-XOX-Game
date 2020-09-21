@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../pyqt5/icon.png</normaloff>../pyqt5/icon.png</iconset>
+    <normaloff>assets/GameIcon.png</normaloff>assets/GameIcon.png</iconset>
   </property>
   <property name="iconSize">
    <size>
