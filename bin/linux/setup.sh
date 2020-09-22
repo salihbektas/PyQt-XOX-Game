@@ -3,6 +3,7 @@ LINK=$(readlink -f "0")
 BASEDIR=$(dirname "$LINK")
 ICON="${BASEDIR}/assets/GameIcon.png"
 EXE="${BASEDIR}/XOXGAME"
+chmod +x XOXGAME
 echo "[Desktop Entry]
 Name=XOXGAME
 Exec="\"${EXE}\""
