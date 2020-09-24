@@ -19,10 +19,9 @@ Grant execute permission for **bin/linux/XOXGAME** then you can click and play.
 If you want to add the game to the application menu, run `sudo setup.sh` in terminal. Press `super` key, type "XOXGAME" on search bar.
 
 ## Run on source
+You must have [**python3**](https://www.python.org/downloads/) and [**pyqt5**](https://pypi.org/project/PyQt5/) installed on your system.
 
-You must have **python3** and **pyqt5** installed on your system.
-
-Run `python3 XOXGAME.py` on terminal.
+Run `python XOXGAME.py` on terminal.
 
 # Contact
 Salih Bektaş
